@@ -1,5 +1,5 @@
 FROM hadoop-base:latest
-LABEL maintainer="MarcLamberti"
+LABEL maintainer="Test"
 
 COPY start-nodemanager.sh start-nodemanager.sh
 

@@ -1,5 +1,5 @@
 FROM hadoop-base:latest
-LABEL maintainer="MarcLamberti"
+LABEL maintainer="Test"
 
 RUN mkdir -p /hadoop/yarn/timeline
 

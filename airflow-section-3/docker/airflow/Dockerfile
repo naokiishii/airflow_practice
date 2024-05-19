@@ -1,6 +1,6 @@
 # Base Image
 FROM spark-base:latest
-LABEL maintainer="MarcLamberti"
+LABEL maintainer="Test"
 
 # Arguments that can be set with docker build
 ARG AIRFLOW_VERSION=2.1.4
@@ -57,7 +57,10 @@ RUN chown -R airflow: ${AIRFLOW_HOME}
 COPY ./start-airflow.sh ./start-airflow.sh
 
 # Set the entrypoint.sh file to be executable
-RUN chmod +x ./start-airflow.sh
+RUN chmod +rx ./start-airflow.sh
+RUN chmod +rx ./entrypoint.sh
+RUN chmod +r /opt/hadoop/etc/hadoop/*
+RUN chmod +r /opt/hive/conf/*
 
 # Set the username to use
 USER airflow
