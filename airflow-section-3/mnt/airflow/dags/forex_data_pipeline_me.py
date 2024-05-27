@@ -108,7 +108,7 @@ with DAG("forex_data_pipeline_me", start_date=datetime(2021, 1, 1), schedule_int
     
     send_email_notification = EmailOperator(
         task_id="send_email_notification",
-        to="ishii.naoki@ymail.ne.jp",
+        to="example@example.com",
         subject="forex_data_pipeline",
         html_content="<h3>forex_data_pipiline_me</h3>"
     )
